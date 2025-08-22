@@ -1,0 +1,235 @@
+[
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "alertSensitivity": "Medium",
+          "criterionType": "DynamicThresholdCriterion",
+          "failingPeriods": {
+            "minFailingPeriodsToAlert": 2.0,
+            "numberOfEvaluationPeriods": 2.0
+          },
+          "metricName": "Percentage4XX",
+          "metricNamespace": "Microsoft.Cdn/profiles",
+          "name": "ServiceApiResult",
+          "operator": "GreaterThan",
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Frontdoor CDN Origin Latency",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "afd-centralus-cats-shared-Percentage4XXAlert",
+    "resourceGroup": "rg-centralus-network-cats-shared",
+    "severity": 2,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "alertSensitivity": "Medium",
+          "criterionType": "DynamicThresholdCriterion",
+          "failingPeriods": {
+            "minFailingPeriodsToAlert": 2.0,
+            "numberOfEvaluationPeriods": 2.0
+          },
+          "metricName": "Percentage5XX",
+          "metricNamespace": "Microsoft.Cdn/profiles",
+          "name": "ServiceApiResult",
+          "operator": "GreaterThan",
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Frontdoor CDN Origin Latency",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "afd-centralus-cats-shared-Percentage5XXAlert",
+    "resourceGroup": "rg-centralus-network-cats-shared",
+    "severity": 2,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "OriginHealthPercentage",
+          "metricNamespace": "Microsoft.Cdn/profiles",
+          "name": "OriginHealthPercentage",
+          "operator": "LessThan",
+          "threshold": 90.0,
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Frontdoor Origin Health Percentage",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "afd-centralus-cats-shared-OriginHealthPercentage",
+    "resourceGroup": "rg-centralus-network-cats-shared",
+    "severity": 2,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "ifunderddosattack",
+          "metricNamespace": "Microsoft.Network/virtualNetworks",
+          "name": "ifunderddosattack",
+          "operator": "GreaterThan",
+          "threshold": 1.0,
+          "timeAggregation": "Maximum"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for VNet DDOS Attack",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "vnet-centralus-cats-prod-DDOSAttackAlert",
+    "resourceGroup": "rg-centralus-network-cats-prod",
+    "severity": 1,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "Availability",
+          "metricNamespace": "Microsoft.Storage/storageAccounts",
+          "name": "Availability",
+          "operator": "LessThan",
+          "threshold": 90.0,
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Storage Account Availability",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "sacentraluscfgcatsprodv7-AvailabilityAlert",
+    "resourceGroup": "rg-centralus-application-cats-prod",
+    "severity": 1,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "Availability",
+          "metricNamespace": "Microsoft.Storage/storageAccounts",
+          "name": "Availability",
+          "operator": "LessThan",
+          "threshold": 90.0,
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Storage Account Availability",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "sasqlmiusceamcatspshpb-AvailabilityAlert",
+    "resourceGroup": "rg-centralus-sqlmi-cats-prod",
+    "severity": 1,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "ifunderddosattack",
+          "metricNamespace": "Microsoft.Network/virtualNetworks",
+          "name": "ifunderddosattack",
+          "operator": "GreaterThan",
+          "threshold": 1.0,
+          "timeAggregation": "Maximum"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for VNet DDOS Attack",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "vnet-eastus2-cats-drprod-DDOSAttackAlert",
+    "resourceGroup": "rg-eastus2-network-cats-drprod",
+    "severity": 1,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "Availability",
+          "metricNamespace": "Microsoft.Storage/storageAccounts",
+          "name": "Availability",
+          "operator": "LessThan",
+          "threshold": 90.0,
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Storage Account Availability",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "fkwfkyrgeastus2asrcache-AvailabilityAlert",
+    "resourceGroup": "rg-eastus2-application-cats-drprod",
+    "severity": 1,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  },
+  {
+    "autoMitigate": true,
+    "criteria": {
+      "allOf": [
+        {
+          "criterionType": "StaticThresholdCriterion",
+          "metricName": "Availability",
+          "metricNamespace": "Microsoft.Storage/storageAccounts",
+          "name": "Availability",
+          "operator": "LessThan",
+          "threshold": 90.0,
+          "timeAggregation": "Average"
+        }
+      ],
+      "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"
+    },
+    "description": "Metric Alert for Storage Account Availability",
+    "enabled": true,
+    "lastUpdatedTime": null,
+    "name": "cxbaxjrgeastus2asrcache-AvailabilityAlert",
+    "resourceGroup": "rg-eastus2-application-cats-drprod",
+    "severity": 1,
+    "targetResourceRegion": null,
+    "targetResourceType": null
+  }
+]

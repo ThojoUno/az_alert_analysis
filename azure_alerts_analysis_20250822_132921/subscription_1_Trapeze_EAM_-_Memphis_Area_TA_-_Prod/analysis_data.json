@@ -1,0 +1,21 @@
+{
+  "total_alerts": 10,
+  "severity_breakdown": {
+    "Sev4": 10
+  },
+  "resource_type_breakdown": {
+    "managedinstances": 1
+  },
+  "resource_group_breakdown": {
+    "rg-centralus-sqlmi-mata-prod": 1
+  },
+  "top_alerting_resources": {
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39": 9,
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/providers/microsoft.sql/managedinstances/sqlmiusceammataprod": 1
+  },
+  "hourly_distribution": {},
+  "daily_distribution": {},
+  "correlation_patterns": [],
+  "tuning_recommendations": [],
+  "alert_storms": []
+}

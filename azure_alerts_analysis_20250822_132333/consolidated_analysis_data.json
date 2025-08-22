@@ -1,0 +1,13 @@
+{
+  "total_alerts": 0,
+  "severity_breakdown": {},
+  "resource_type_breakdown": {},
+  "resource_group_breakdown": {},
+  "top_alerting_resources": {},
+  "hourly_distribution": {},
+  "daily_distribution": {},
+  "correlation_patterns": [],
+  "tuning_recommendations": [],
+  "alert_storms": [],
+  "subscription_summary": []
+}

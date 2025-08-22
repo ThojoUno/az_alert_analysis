@@ -1,0 +1,227 @@
+[
+  {
+    "category": "ResourceHealth",
+    "correlationId": "0475f5ae-b620-4340-9d5d-01da2630bf5b",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T20:15:19.1256315Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "c1b3894e-b429-4b61-9fa1-a6a21e0ce2ab",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T19:10:19.4790515Z"
+  },
+  {
+    "category": "Alert",
+    "correlationId": "28bb3f5f-3157-41a9-9749-3d4ac4a53eea",
+    "description": null,
+    "level": "Informational",
+    "operationName": "Microsoft.Insights/ActivityLogAlerts/Activated/action",
+    "resourceGroup": "RG-AMBA-MONITORING-001",
+    "resourceId": "/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/providers/microsoft.insights/activityLogAlerts/ResourceHealthUnhealthyAlert",
+    "resourceType": {
+      "localizedValue": "microsoft.insights/activitylogalerts",
+      "value": "microsoft.insights/activitylogalerts"
+    },
+    "status": "Succeeded",
+    "timestamp": "2025-08-22T18:33:56.0721064Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "28bb3f5f-3157-41a9-9749-3d4ac4a53eea",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-AMBA-MONITORING-001",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/TRAPEZE EAM - CHARLOTTE AREA TRANSIT SYSTEM - PROD-VMLOWMEMORYALERT",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.INSIGHTS/scheduledqueryrules",
+      "value": "MICROSOFT.INSIGHTS/scheduledqueryrules"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T18:28:37.1881338Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "858b1797-d676-4b29-b4e3-4af1c4292840",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/InProgress/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "In Progress",
+    "timestamp": "2025-08-22T18:25:19.3907285Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "858b1797-d676-4b29-b4e3-4af1c4292840",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/InProgress/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Updated",
+    "timestamp": "2025-08-22T18:25:19.39Z"
+  },
+  {
+    "category": "Alert",
+    "correlationId": "28bb3f5f-3157-41a9-9749-3d4ac4a53eea",
+    "description": null,
+    "level": "Informational",
+    "operationName": "Microsoft.Insights/ActivityLogAlerts/Activated/action",
+    "resourceGroup": "RG-AMBA-MONITORING-001",
+    "resourceId": "/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/providers/microsoft.insights/activityLogAlerts/ResourceHealthUnhealthyAlert",
+    "resourceType": {
+      "localizedValue": "microsoft.insights/activitylogalerts",
+      "value": "microsoft.insights/activitylogalerts"
+    },
+    "status": "Succeeded",
+    "timestamp": "2025-08-22T18:18:56.0537429Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "28bb3f5f-3157-41a9-9749-3d4ac4a53eea",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-AMBA-MONITORING-001",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/TRAPEZE EAM - CHARLOTTE AREA TRANSIT SYSTEM - PROD-VMLOWMEMORYALERT",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.INSIGHTS/scheduledqueryrules",
+      "value": "MICROSOFT.INSIGHTS/scheduledqueryrules"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T18:13:36.9385903Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "cc7e81d7-bae6-4bbb-bc8b-ca4304a494e9",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T17:00:18.7616952Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "cc7e81d7-bae6-4bbb-bc8b-ca4304a494e9",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/InProgress/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "In Progress",
+    "timestamp": "2025-08-22T16:30:18.7360419Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "cc7e81d7-bae6-4bbb-bc8b-ca4304a494e9",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/InProgress/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Updated",
+    "timestamp": "2025-08-22T16:30:18.736Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "31a4c7f4-1cd8-4d5c-9762-636cc8ca94b7",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T15:50:18.7577533Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "2229482d-6676-4fb0-bac5-110d669a41db",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T15:05:18.4194211Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "2229482d-6676-4fb0-bac5-110d669a41db",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T14:45:18.6570393Z"
+  },
+  {
+    "category": "ResourceHealth",
+    "correlationId": "2229482d-6676-4fb0-bac5-110d669a41db",
+    "description": null,
+    "level": "Critical",
+    "operationName": "Microsoft.Resourcehealth/healthevent/Activated/action",
+    "resourceGroup": "RG-CENTRALUS-NETWORK-CATS-SHARED",
+    "resourceId": "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED",
+    "resourceType": {
+      "localizedValue": "MICROSOFT.CDN/profiles",
+      "value": "MICROSOFT.CDN/profiles"
+    },
+    "status": "Active",
+    "timestamp": "2025-08-22T14:20:18.429674Z"
+  }
+]

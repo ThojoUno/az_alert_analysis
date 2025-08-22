@@ -1,0 +1,49 @@
+{
+  "total_alerts": 10,
+  "severity_breakdown": {
+    "Sev4": 10
+  },
+  "resource_type_breakdown": {
+    "managedinstances": 1
+  },
+  "resource_group_breakdown": {
+    "rg-centralus-sqlmi-mata-prod": 1
+  },
+  "top_alerting_resources": {
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39": 9,
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/providers/microsoft.sql/managedinstances/sqlmiusceammataprod": 1
+  },
+  "hourly_distribution": {},
+  "daily_distribution": {},
+  "correlation_patterns": [],
+  "tuning_recommendations": [],
+  "alert_storms": [],
+  "subscription_summary": [
+    {
+      "name": "Trapeze EAM - Charlotte Area Transit System - Prod",
+      "id": "a230b764-2cfc-466b-82d2-40fc92961a2a",
+      "directory": "subscription_2_Trapeze_EAM_-_Charlotte_Area_Transit_System_-_Prod",
+      "total_alerts": 0,
+      "severity_breakdown": {},
+      "has_data": false
+    },
+    {
+      "name": "Trapeze EAM - Memphis Area TA - Prod",
+      "id": "8cff88e3-7424-4403-bccc-d8b4672f4d39",
+      "directory": "subscription_1_Trapeze_EAM_-_Memphis_Area_TA_-_Prod",
+      "total_alerts": 10,
+      "severity_breakdown": {
+        "Sev4": 10
+      },
+      "has_data": true
+    },
+    {
+      "name": "Trapeze EAM - HamptonRoadsTransit - Training",
+      "id": "db048d03-caaa-4667-aae6-a72fc378fbcc",
+      "directory": "subscription_3_Trapeze_EAM_-_HamptonRoadsTransit_-_Training",
+      "total_alerts": 0,
+      "severity_breakdown": {},
+      "has_data": false
+    }
+  ]
+}

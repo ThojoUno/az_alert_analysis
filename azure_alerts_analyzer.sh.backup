@@ -499,14 +499,13 @@ echo -e "Output Directory: ${YELLOW}$OUTPUT_DIR${NC}"
 # Function to get all subscriptions in current tenant
 get_all_subscriptions() {
     echo -e "${BLUE}Getting all subscriptions in current tenant ($TENANT_ID)...${NC}" >&2
-    az account list --query "[?state=='Enabled' && tenantId=='$TENANT_ID'].{id:id,name:name}" -o tsv
+    az account list --query "[?state=='Enabled' && tenantId=='$TENANT_ID'].{id:id,name:name}" -o tsv | while IFS=$'\t' read -r sub_id sub_name; do
+        echo "$sub_id:$sub_name"
+    done
 }
 
 analyze_subscription_alerts() {
     local output_dir="$1"
-    
-    # Debug: Verify function is available
-    echo "DEBUG: analyze_subscription_alerts function called with output_dir: $output_dir" >&2
     
     # Get current subscription info
     CURRENT_SUB=$(az account show --query name -o tsv)
@@ -1201,11 +1200,6 @@ analyze_subscription() {
     echo "Subscription Name: $sub_name" >> "$sub_output_dir/subscription_info.txt"
     echo "Analysis Date: $(date)" >> "$sub_output_dir/subscription_info.txt"
     
-    # Debug: About to call analyze_subscription_alerts
-    echo "DEBUG: About to call analyze_subscription_alerts with: $sub_output_dir" >&2
-    echo "DEBUG: Current functions available:" >&2
-    declare -F | grep analyze >&2
-    
     # Run the alert analysis for this subscription (we'll call the analysis functions here)
     analyze_subscription_alerts "$sub_output_dir"
 }
@@ -1243,10 +1237,7 @@ if [ "$ALL_SUBSCRIPTIONS" = true ]; then
     
     # Process each subscription
     SUB_COUNT=0
-    while IFS=$'\t' read -r sub_id sub_name; do
-        # Trim whitespace from both fields
-        sub_id=$(echo "$sub_id" | xargs)
-        sub_name=$(echo "$sub_name" | xargs)
+    while IFS=':' read -r sub_id sub_name; do
         SUB_COUNT=$((SUB_COUNT + 1))
         SANITIZED_NAME=$(echo "$sub_name" | tr ' ' '_' | tr -cd '[:alnum:]_-' | cut -c1-50)
         SUB_DIR="$OUTPUT_DIR/subscription_${SUB_COUNT}_${SANITIZED_NAME}"
