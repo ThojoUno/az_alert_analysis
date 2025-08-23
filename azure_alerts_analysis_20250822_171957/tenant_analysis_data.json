@@ -1,0 +1,91 @@
+{
+  "total_alerts": 75,
+  "severity_breakdown": {
+    "Critical": 14,
+    "Informational": 2,
+    "Sev4": 59
+  },
+  "alert_state_breakdown": {
+    "New": 59
+  },
+  "alert_state_by_severity": {
+    "Sev4": {
+      "New": 59
+    }
+  },
+  "alert_lifecycle_metrics": {
+    "new_alerts": 59,
+    "acknowledged_alerts": 0,
+    "closed_alerts": 0
+  },
+  "top_alerts_by_severity": {
+    "Sev0": {},
+    "Sev1": {},
+    "Sev2": {},
+    "Sev3": {},
+    "Sev4": {
+      "ResourceHealthUnhealthyAlert": 50,
+      "Trapeze - EAM - Memphis Area TA - PROD - Service Health Planned Maintenance Alert": 8,
+      "Trapeze - EAM - MATA - Prod - Resource Health Unhealthy Alert": 1
+    }
+  },
+  "resource_type_breakdown": {
+    "MICROSOFT.CDN/profiles": 12,
+    "microsoft.insights/activitylogalerts": 2,
+    "MICROSOFT.INSIGHTS/scheduledqueryrules": 2,
+    "scheduledqueryrules": 50,
+    "managedinstances": 1
+  },
+  "resource_group_breakdown": {
+    "RG-CENTRALUS-NETWORK-CATS-SHARED": 12,
+    "RG-AMBA-MONITORING-001": 4,
+    "rg-amba-monitoring-001": 50,
+    "rg-centralus-sqlmi-mata-prod": 1
+  },
+  "top_alerting_resources": {
+    "/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/providers/microsoft.insights/scheduledqueryrules/trapeze eam - charlotte area transit system - prod-vmlowmemoryalert": 48,
+    "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED": 12,
+    "/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/providers/microsoft.insights/activityLogAlerts/ResourceHealthUnhealthyAlert": 2,
+    "/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/TRAPEZE EAM - CHARLOTTE AREA TRANSIT SYSTEM - PROD-VMLOWMEMORYALERT": 2,
+    "/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/providers/microsoft.insights/scheduledqueryrules/trapeze eam - charlotte area transit system - prod-vmlowdatadiskspacealert": 2,
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39": 8,
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/providers/microsoft.sql/managedinstances/sqlmiusceammataprod": 1
+  },
+  "hourly_distribution": {},
+  "daily_distribution": {},
+  "correlation_patterns": [],
+  "tuning_recommendations": [],
+  "alert_storms": [],
+  "subscription_summary": [
+    {
+      "name": "Trapeze EAM - Charlotte Area Transit System - Prod",
+      "id": "a230b764-2cfc-466b-82d2-40fc92961a2a",
+      "directory": "subscription_2_Trapeze_EAM_-_Charlotte_Area_Transit_System_-_Prod",
+      "total_alerts": 66,
+      "severity_breakdown": {
+        "Critical": 14,
+        "Informational": 2,
+        "Sev4": 50
+      },
+      "has_data": true
+    },
+    {
+      "name": "Trapeze EAM - Memphis Area TA - Prod",
+      "id": "8cff88e3-7424-4403-bccc-d8b4672f4d39",
+      "directory": "subscription_1_Trapeze_EAM_-_Memphis_Area_TA_-_Prod",
+      "total_alerts": 9,
+      "severity_breakdown": {
+        "Sev4": 9
+      },
+      "has_data": true
+    },
+    {
+      "name": "Trapeze EAM - HamptonRoadsTransit - Training",
+      "id": "db048d03-caaa-4667-aae6-a72fc378fbcc",
+      "directory": "subscription_3_Trapeze_EAM_-_HamptonRoadsTransit_-_Training",
+      "total_alerts": 0,
+      "severity_breakdown": {},
+      "has_data": false
+    }
+  ]
+}

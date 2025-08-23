@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Azure Alerts Analysis Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0078d4;
+            border-bottom: 3px solid #0078d4;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #323130;
+            margin-top: 30px;
+            border-bottom: 1px solid #edebe9;
+            padding-bottom: 5px;
+        }
+        .metric-card {
+            display: inline-block;
+            padding: 15px;
+            margin: 10px;
+            background-color: #f3f2f1;
+            border-radius: 4px;
+            min-width: 150px;
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0078d4;
+        }
+        .metric-label {
+            font-size: 14px;
+            color: #605e5c;
+            margin-top: 5px;
+        }
+        .severity-critical {
+            color: #d13438;
+        }
+        .severity-error {
+            color: #e81123;
+        }
+        .severity-warning {
+            color: #ff8c00;
+        }
+        .severity-info {
+            color: #0078d4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background-color: #0078d4;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #edebe9;
+        }
+        tr:hover {
+            background-color: #f3f2f1;
+        }
+        .recommendation {
+            background-color: #fff4ce;
+            border-left: 4px solid #ffb900;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .alert-storm {
+            background-color: #fde7e9;
+            border-left: 4px solid #d13438;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f3f2f1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Azure Alerts Analysis Dashboard</h1>
+        <p id="timestamp"></p>
+        
+        <div id="metrics"></div>
+        <div id="charts"></div>
+        <div id="tables"></div>
+        <div id="recommendations"></div>
+    </div>
+    
+    <script>
+        // Load analysis data
+        fetch('analysis_data.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('timestamp').innerHTML = 
+                    'Generated: ' + new Date().toLocaleString();
+                
+                // Display metrics
+                let metricsHtml = `
+                    <div class="metric-card">
+                        <div class="metric-value">${data.total_alerts}</div>
+                        <div class="metric-label">Total Alerts</div>
+                    </div>
+                `;
+                
+                // Add alert state metrics if available
+                if (data.alert_lifecycle_metrics) {
+                    metricsHtml += `
+                        <div class="metric-card">
+                            <div class="metric-value">${data.alert_lifecycle_metrics.new_alerts}</div>
+                            <div class="metric-label">New Alerts</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">${data.alert_lifecycle_metrics.acknowledged_alerts}</div>
+                            <div class="metric-label">Acknowledged</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">${data.alert_lifecycle_metrics.closed_alerts}</div>
+                            <div class="metric-label">Closed/Resolved</div>
+                        </div>
+                    `;
+                }
+                
+                document.getElementById('metrics').innerHTML = metricsHtml;
+                
+                // Display severity breakdown
+                let chartsHtml = '<h2>Alert Severity Distribution</h2>';
+                if (data.severity_breakdown) {
+                    chartsHtml += '<table><tr><th>Severity</th><th>Count</th><th>Percentage</th></tr>';
+                    const total = data.total_alerts;
+                    Object.entries(data.severity_breakdown).forEach(([severity, count]) => {
+                        const percentage = total > 0 ? (count / total * 100).toFixed(1) : 0;
+                        const severityClass = getSeverityClass(severity);
+                        chartsHtml += `<tr><td class="${severityClass}">${severity}</td><td>${count}</td><td>${percentage}%</td></tr>`;
+                    });
+                    chartsHtml += '</table>';
+                }
+                
+                // Display alert state breakdown with severity details
+                if (data.alert_state_breakdown) {
+                    chartsHtml += '<h2>Alert State Distribution</h2>';
+                    chartsHtml += '<table><tr><th>State</th><th>Count</th><th>Percentage</th><th>Severity Breakdown</th></tr>';
+                    const total = data.total_alerts;
+                    Object.entries(data.alert_state_breakdown).forEach(([state, count]) => {
+                        const percentage = total > 0 ? (count / total * 100).toFixed(1) : 0;
+                        
+                        // Build severity breakdown for this state
+                        let severityDetails = '';
+                        if (data.alert_state_by_severity) {
+                            const severities = [];
+                            Object.entries(data.alert_state_by_severity).forEach(([severity, states]) => {
+                                if (states[state] && states[state] > 0) {
+                                    const severityClass = getSeverityClass(severity);
+                                    severities.push(`<span class="${severityClass}">${severity}: ${states[state]}</span>`);
+                                }
+                            });
+                            severityDetails = severities.length > 0 ? severities.join('<br>') : 'None';
+                        }
+                        
+                        chartsHtml += `<tr><td><strong>${state}</strong></td><td>${count}</td><td>${percentage}%</td><td>${severityDetails}</td></tr>`;
+                    });
+                    chartsHtml += '</table>';
+                }
+                
+                document.getElementById('charts').innerHTML = chartsHtml;
+                
+                // Display top alerts by severity
+                let tablesHtml = '<h2>Top Alerts by Severity</h2>';
+                if (data.top_alerts_by_severity) {
+                    ['Sev0', 'Sev1', 'Sev2', 'Sev3', 'Sev4'].forEach(severity => {
+                        if (data.top_alerts_by_severity[severity] && Object.keys(data.top_alerts_by_severity[severity]).length > 0) {
+                            const severityClass = getSeverityClass(severity);
+                            tablesHtml += `<h3 class="${severityClass}">${severity} Alerts</h3>`;
+                            tablesHtml += '<table><tr><th>Alert Name</th><th>Occurrences</th></tr>';
+                            Object.entries(data.top_alerts_by_severity[severity])
+                                .sort(([,a], [,b]) => b - a)
+                                .slice(0, 10)
+                                .forEach(([alertName, count]) => {
+                                    tablesHtml += `<tr><td>${alertName}</td><td>${count}</td></tr>`;
+                                });
+                            tablesHtml += '</table>';
+                        }
+                    });
+                }
+                
+                // Display top alerting resources
+                if (data.top_alerting_resources) {
+                    tablesHtml += '<h2>Top Alerting Resources</h2>';
+                    tablesHtml += '<table><tr><th>AffectedResource</th><th>Alert Count</th></tr>';
+                    Object.entries(data.top_alerting_resources)
+                        .sort(([,a], [,b]) => b - a)
+                        .slice(0, 10)
+                        .forEach(([resource, count]) => {
+                            // Truncate long resource names
+                            const displayName = resource.length > 80 ? resource.substring(0, 77) + '...' : resource;
+                            tablesHtml += `<tr><td title="${resource}">${displayName}</td><td>${count}</td></tr>`;
+                        });
+                    tablesHtml += '</table>';
+                }
+                
+                // Add ResourceHealth dashboard link if available
+                if (data.resource_health_alerts && data.resource_health_alerts.length > 0) {
+                    tablesHtml += '<div style="background-color: #e7f3ff; border-left: 4px solid #0078d4; padding: 15px; margin: 20px 0;">';
+                    tablesHtml += '<h3>🏥 ResourceHealth Alerts Detected</h3>';
+                    tablesHtml += `<p>Found ${data.resource_health_alerts.length} ResourceHealth unhealthy alerts that may be causing noise.</p>`;
+                    tablesHtml += '<a href="resourcehealth_dashboard.html" style="display: inline-block; background-color: #d13438; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px;">View Detailed ResourceHealth Analysis →</a>';
+                    tablesHtml += '</div>';
+                }
+                
+                document.getElementById('tables').innerHTML = tablesHtml;
+                
+                // Display recommendations and storms
+                let recommendationsHtml = '';
+                if (data.alert_storms && data.alert_storms.length > 0) {
+                    recommendationsHtml += '<h2>Detected Alert Storms</h2>';
+                    data.alert_storms.forEach(storm => {
+                        recommendationsHtml += `
+                            <div class="alert-storm">
+                                <strong>Alert Storm:</strong> ${storm.count} alerts at ${storm.time}<br>
+                                <strong>Affected Resources:</strong> ${storm.resources.join(', ')}
+                            </div>
+                        `;
+                    });
+                }
+                
+                if (data.tuning_recommendations && data.tuning_recommendations.length > 0) {
+                    recommendationsHtml += '<h2>Tuning Recommendations</h2>';
+                    data.tuning_recommendations.forEach(rec => {
+                        recommendationsHtml += `
+                            <div class="recommendation">
+                                <strong>Resource:</strong> ${rec.resource}<br>
+                                <strong>Alert Count:</strong> ${rec.alert_count}<br>
+                                <strong>Recommendation:</strong> ${rec.recommendation}
+                            </div>
+                        `;
+                    });
+                }
+                
+                document.getElementById('recommendations').innerHTML = recommendationsHtml;
+                
+                // Helper function to get severity CSS class
+                function getSeverityClass(severity) {
+                    const severityMap = {
+                        'Sev0': 'severity-critical',
+                        'Sev1': 'severity-error', 
+                        'Sev2': 'severity-warning',
+                        'Sev3': 'severity-info',
+                        'Sev4': 'severity-info',
+                        'Critical': 'severity-critical',
+                        'Error': 'severity-error',
+                        'Warning': 'severity-warning',
+                        'Informational': 'severity-info'
+                    };
+                    return severityMap[severity] || '';
+                }
+            })
+            .catch(error => console.error('Error loading data:', error));
+    </script>
+</body>
+</html>

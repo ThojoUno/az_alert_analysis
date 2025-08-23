@@ -1,0 +1,53 @@
+{
+  "total_alerts": 9,
+  "severity_breakdown": {
+    "Sev4": 9
+  },
+  "alert_state_breakdown": {
+    "New": 9
+  },
+  "alert_state_by_severity": {
+    "Sev4": {
+      "New": 9
+    }
+  },
+  "alert_lifecycle_metrics": {
+    "new_alerts": 9,
+    "acknowledged_alerts": 0,
+    "closed_alerts": 0,
+    "avg_time_to_acknowledge": 0,
+    "avg_time_to_close": 0
+  },
+  "resource_type_breakdown": {
+    "managedinstances": 1
+  },
+  "resource_group_breakdown": {
+    "rg-centralus-sqlmi-mata-prod": 1
+  },
+  "top_alerting_resources": {
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39": 8,
+    "/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/providers/microsoft.sql/managedinstances/sqlmiusceammataprod": 1
+  },
+  "top_alerts_by_severity": {
+    "Sev4": {
+      "Trapeze - EAM - Memphis Area TA - PROD - Service Health Planned Maintenance Alert": 8,
+      "Trapeze - EAM - MATA - Prod - Resource Health Unhealthy Alert": 1
+    }
+  },
+  "hourly_distribution": {
+    "15": 3,
+    "22": 3,
+    "23": 1,
+    "21": 2
+  },
+  "daily_distribution": {
+    "2025-08-19": 1,
+    "2025-08-18": 2,
+    "2025-08-17": 4,
+    "2025-08-16": 2
+  },
+  "correlation_patterns": [],
+  "tuning_recommendations": [],
+  "alert_storms": [],
+  "resource_health_alerts": []
+}

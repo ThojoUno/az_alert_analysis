@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Azure Tenant-Level Alerts Analysis Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0078d4;
+            border-bottom: 3px solid #0078d4;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #323130;
+            margin-top: 30px;
+            border-bottom: 1px solid #edebe9;
+            padding-bottom: 5px;
+        }
+        .metric-card {
+            display: inline-block;
+            padding: 20px;
+            margin: 15px;
+            background-color: #f3f2f1;
+            border-radius: 8px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .metric-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0078d4;
+        }
+        .metric-label {
+            font-size: 16px;
+            color: #605e5c;
+            margin-top: 8px;
+        }
+        .severity-critical { color: #d13438; }
+        .severity-error { color: #e81123; }
+        .severity-warning { color: #ff8c00; }
+        .severity-info { color: #0078d4; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background-color: #0078d4;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #edebe9;
+        }
+        tr:hover {
+            background-color: #f3f2f1;
+        }
+        .subscription-card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .subscription-name {
+            font-weight: bold;
+            color: #0078d4;
+            font-size: 18px;
+        }
+        .no-data {
+            color: #6c757d;
+            font-style: italic;
+        }
+        .tenant-info {
+            background-color: #e3f2fd;
+            border-left: 4px solid #0078d4;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏢 Azure Tenant-Level Alerts Analysis Dashboard</h1>
+        <div class="tenant-info">
+            <strong>Analysis Generated:</strong> 2025-08-22 17:20:44<br>
+            <strong>Scope:</strong> Complete Azure Tenant Alert Analysis<br>
+            <strong>Subscriptions Analyzed:</strong> 3
+        </div>
+        
+        <h2>📊 Tenant-Level Alert Metrics</h2>
+        <div style="text-align: center;">
+            <div class="metric-card">
+                <div class="metric-value">75</div>
+                <div class="metric-label">Total Tenant Alerts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">3</div>
+                <div class="metric-label">Subscriptions Analyzed</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">2</div>
+                <div class="metric-label">Subscriptions with Alerts</div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="metric-card">
+                <div class="metric-value">59</div>
+                <div class="metric-label">New Alerts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Acknowledged Alerts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Closed/Resolved Alerts</div>
+            </div>
+        </div><h2>🚨 Tenant Alert Severity Distribution</h2><table><tr><th>Severity</th><th>Count</th><th>Percentage</th></tr><tr><td class="severity-info">Sev4</td><td>59</td><td>78.7%</td></tr><tr><td class="severity-critical">Critical</td><td>14</td><td>18.7%</td></tr><tr><td class="severity-info">Informational</td><td>2</td><td>2.7%</td></tr></table><h2>🔄 Alert State Distribution</h2><table><tr><th>State</th><th>Count</th><th>Percentage</th><th>Severity Breakdown</th></tr><tr><td><strong>New</strong></td><td>59</td><td>78.7%</td><td><span class="severity-info">Sev4: 59</span></td></tr></table><h2>⚠️ Top Alerts by Severity (Tenant-Wide)</h2><h3 class="severity-info">Sev4 Alerts (Tenant-Wide)</h3><table><tr><th>Alert Name</th><th>Total Occurrences</th></tr><tr><td>ResourceHealthUnhealthyAlert</td><td>50</td></tr><tr><td>Trapeze - EAM - Memphis Area TA - PROD - Service Health Planned Maintenance Alert</td><td>8</td></tr><tr><td>Trapeze - EAM - MATA - Prod - Resource Health Unhealthy Alert</td><td>1</td></tr></table><h2>🎯 Top Alerting Resources (Tenant-Wide)</h2><table><tr><th>AffectedResource</th><th>Alert Count</th></tr><tr><td title="/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/providers/microsoft.insights/scheduledqueryrules/trapeze eam - charlotte area transit system - prod-vmlowmemoryalert">/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/provide...</td><td>48</td></tr><tr><td title="/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED">/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHAR...</td><td>12</td></tr><tr><td title="/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39">/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39</td><td>8</td></tr><tr><td title="/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/providers/microsoft.insights/activityLogAlerts/ResourceHealthUnhealthyAlert">/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/provide...</td><td>2</td></tr><tr><td title="/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/TRAPEZE EAM - CHARLOTTE AREA TRANSIT SYSTEM - PROD-VMLOWMEMORYALERT">/SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDE...</td><td>2</td></tr><tr><td title="/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/providers/microsoft.insights/scheduledqueryrules/trapeze eam - charlotte area transit system - prod-vmlowdatadiskspacealert">/subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/provide...</td><td>2</td></tr><tr><td title="/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/providers/microsoft.sql/managedinstances/sqlmiusceammataprod">/subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/p...</td><td>1</td></tr></table><h2>📋 Per-Subscription Analysis Summary</h2>
+        <div class="subscription-card">
+            <div class="subscription-name">Trapeze EAM - Charlotte Area Transit System - Prod</div>
+            <div><strong>Subscription ID:</strong> a230b764-2cfc-466b-82d2-40fc92961a2a</div>
+            <div class=""><strong>Alert Count:</strong> 66 alerts</div>
+            <div><strong>Analysis Directory:</strong> subscription_2_Trapeze_EAM_-_Charlotte_Area_Transit_System_-_Prod</div>
+        </div>
+        <div class="subscription-card">
+            <div class="subscription-name">Trapeze EAM - Memphis Area TA - Prod</div>
+            <div><strong>Subscription ID:</strong> 8cff88e3-7424-4403-bccc-d8b4672f4d39</div>
+            <div class=""><strong>Alert Count:</strong> 9 alerts</div>
+            <div><strong>Analysis Directory:</strong> subscription_1_Trapeze_EAM_-_Memphis_Area_TA_-_Prod</div>
+        </div>
+        <div class="subscription-card">
+            <div class="subscription-name">Trapeze EAM - HamptonRoadsTransit - Training</div>
+            <div><strong>Subscription ID:</strong> db048d03-caaa-4667-aae6-a72fc378fbcc</div>
+            <div class="no-data"><strong>Alert Count:</strong> No alerts found</div>
+            <div><strong>Analysis Directory:</strong> subscription_3_Trapeze_EAM_-_HamptonRoadsTransit_-_Training</div>
+        </div>
+    </div>
+</body>
+</html>

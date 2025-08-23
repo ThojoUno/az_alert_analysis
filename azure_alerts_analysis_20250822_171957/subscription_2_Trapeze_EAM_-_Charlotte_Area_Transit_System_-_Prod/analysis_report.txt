@@ -1,0 +1,97 @@
+================================================================================
+AZURE ALERTS ANALYSIS REPORT - LAST 7 DAYS
+================================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------
+Total Alerts: 66
+Average Alerts/Day: 9.4
+
+SEVERITY BREAKDOWN
+----------------------------------------
+  Sev4: 50 (75.8%)
+  Critical: 14 (21.2%)
+  Informational: 2 (3.0%)
+
+ALERT STATE BREAKDOWN
+----------------------------------------
+  New: 50 (75.8%)
+
+ALERT LIFECYCLE METRICS
+----------------------------------------
+  New Alerts: 50
+  Acknowledged Alerts: 0
+  Closed Alerts: 0
+  Acknowledgment Rate: 0.0%
+  Resolution Rate: 0.0%
+
+TOP ALERTS BY SEVERITY
+----------------------------------------
+  Sev4 Alerts:
+    ResourceHealthUnhealthyAlert: 50 occurrences
+
+TOP 10 ALERTING RESOURCES
+----------------------------------------
+  48 alerts: /subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/providers/microsoft.insights/scheduledqueryrules/trapeze eam - charlotte area transit system - prod-vmlowmemoryalert
+  12 alerts: /SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED
+  2 alerts: /subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/providers/microsoft.insights/activityLogAlerts/ResourceHealthUnhealthyAlert
+  2 alerts: /SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/TRAPEZE EAM - CHARLOTTE AREA TRANSIT SYSTEM - PROD-VMLOWMEMORYALERT
+  2 alerts: /subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourcegroups/rg-amba-monitoring-001/providers/microsoft.insights/scheduledqueryrules/trapeze eam - charlotte area transit system - prod-vmlowdatadiskspacealert
+
+ALERTS BY RESOURCE TYPE
+----------------------------------------
+  scheduledqueryrules: 50
+  MICROSOFT.CDN/profiles: 12
+  microsoft.insights/activitylogalerts: 2
+  MICROSOFT.INSIGHTS/scheduledqueryrules: 2
+
+CORRELATED ALERT PATTERNS
+----------------------------------------
+  Correlation ID: 1822db20-94f6-451d-9cfd-9bd7325573f8
+    Related Alerts: 4
+    Resources: /SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED
+  Correlation ID: 28bb3f5f-3157-41a9-9749-3d4ac4a53eea
+    Related Alerts: 4
+    Resources: /SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-AMBA-MONITORING-001/PROVIDERS/MICROSOFT.INSIGHTS/SCHEDULEDQUERYRULES/TRAPEZE EAM - CHARLOTTE AREA TRANSIT SYSTEM - PROD-VMLOWMEMORYALERT, /subscriptions/a230b764-2cfc-466b-82d2-40fc92961a2a/resourceGroups/rg-amba-monitoring-001/providers/microsoft.insights/activityLogAlerts/ResourceHealthUnhealthyAlert
+  Correlation ID: cc7e81d7-bae6-4bbb-bc8b-ca4304a494e9
+    Related Alerts: 3
+    Resources: /SUBSCRIPTIONS/A230B764-2CFC-466B-82D2-40FC92961A2A/RESOURCEGROUPS/RG-CENTRALUS-NETWORK-CATS-SHARED/PROVIDERS/MICROSOFT.CDN/PROFILES/AFD-CENTRALUS-CATS-SHARED
+
+HOURLY ALERT DISTRIBUTION
+----------------------------------------
+  00:00 [  1] #####
+  01:00 [  1] #####
+  02:00 [  4] ####################
+  03:00 [ 10] ##################################################
+  04:00 [  6] ##############################
+  05:00 [  1] #####
+  06:00 [  1] #####
+  07:00 [  3] ###############
+  08:00 [  3] ###############
+  09:00 [  1] #####
+  10:00 [  2] ##########
+  11:00 [  1] #####
+  12:00 [  1] #####
+  13:00 [  3] ###############
+  14:00 [  1] #####
+  15:00 [  0] 
+  16:00 [  2] ##########
+  17:00 [  1] #####
+  18:00 [ 10] ##################################################
+  19:00 [  2] ##########
+  20:00 [  2] ##########
+  21:00 [  1] #####
+  22:00 [  4] ####################
+  23:00 [  5] #########################
+
+DAILY ALERT TREND
+----------------------------------------
+  2025-08-19 [ 14] ##############################
+  2025-08-20 [ 13] ############################
+  2025-08-21 [ 16] ##################################
+  2025-08-22 [ 23] ##################################################
+
+KEY RECOMMENDATIONS
+----------------------------------------
+
+================================================================================

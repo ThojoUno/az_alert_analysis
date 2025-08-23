@@ -1,0 +1,11 @@
+Name                                              Enabled    Severity    Frequency    WindowSize
+------------------------------------------------  ---------  ----------  -----------  ------------
+afd-centralus-cats-shared-Percentage4XXAlert      True       2           PT1M         PT5M
+afd-centralus-cats-shared-Percentage5XXAlert      True       2           PT1M         PT5M
+afd-centralus-cats-shared-OriginHealthPercentage  True       2           PT1M         PT5M
+vnet-centralus-cats-prod-DDOSAttackAlert          True       1           PT1M         PT5M
+sacentraluscfgcatsprodv7-AvailabilityAlert        True       1           PT5M         PT5M
+sasqlmiusceamcatspshpb-AvailabilityAlert          True       1           PT5M         PT5M
+vnet-eastus2-cats-drprod-DDOSAttackAlert          True       1           PT1M         PT5M
+fkwfkyrgeastus2asrcache-AvailabilityAlert         True       1           PT5M         PT5M
+cxbaxjrgeastus2asrcache-AvailabilityAlert         True       1           PT5M         PT5M

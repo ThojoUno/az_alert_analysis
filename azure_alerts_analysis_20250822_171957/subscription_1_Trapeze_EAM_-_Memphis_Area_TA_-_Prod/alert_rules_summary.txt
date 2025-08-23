@@ -1,0 +1,11 @@
+Name                                                                              Enabled    Severity    Frequency    WindowSize
+--------------------------------------------------------------------------------  ---------  ----------  -----------  ------------
+afd-centralus-mata-shared-Percentage4XXAlert                                      True       2           PT1M         PT5M
+afd-centralus-mata-shared-Percentage5XXAlert                                      False      2           PT1M         PT5M
+vnet-centralus-mata-prod-DDOSAttackAlert                                          True       1           PT1M         PT5M
+sacentraluscfgmataprodde-AvailabilityAlert                                        True       1           PT5M         PT5M
+sasqlmiusceammataptowp-AvailabilityAlert                                          True       1           PT5M         PT5M
+stfslmatapcym-AvailabilityAlert                                                   True       1           PT5M         PT5M
+afd-centralus-mata-shared-OriginHealthPercentage                                  False      2           PT1M         PT5M
+Trapeze EAM - MATA Prod - SQLMI - Average CPU Percentage Greater than 85 Percent  True       0           PT15M        PT1H
+Trapeze EAM - MATA Prod - SQLMI - Storage space used over 80 percent              True       0           PT5M         PT5M

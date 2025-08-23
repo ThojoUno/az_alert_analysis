@@ -1,0 +1,22 @@
+
+================================================================================
+MAINTENANCE SCHEDULE REPORT
+================================================================================
+
+CONFIGURED MAINTENANCE WINDOWS
+----------------------------------------
+  Name: mc-centralus-windows-mata-prod-01
+    Scope: InGuestPatch
+    Start: None
+    Duration: None
+    Recurrence: None
+
+  Name: mc-centralus-windows-def-mata-prod-01
+    Scope: InGuestPatch
+    Start: None
+    Duration: None
+    Recurrence: None
+
+
+No upcoming maintenance events found
+================================================================================

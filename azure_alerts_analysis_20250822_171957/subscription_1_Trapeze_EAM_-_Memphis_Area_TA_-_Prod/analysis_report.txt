@@ -1,0 +1,78 @@
+================================================================================
+AZURE ALERTS ANALYSIS REPORT - LAST 7 DAYS
+================================================================================
+
+EXECUTIVE SUMMARY
+----------------------------------------
+Total Alerts: 9
+Average Alerts/Day: 1.3
+
+SEVERITY BREAKDOWN
+----------------------------------------
+  Sev4: 9 (100.0%)
+
+ALERT STATE BREAKDOWN
+----------------------------------------
+  New: 9 (100.0%)
+
+ALERT LIFECYCLE METRICS
+----------------------------------------
+  New Alerts: 9
+  Acknowledged Alerts: 0
+  Closed Alerts: 0
+  Acknowledgment Rate: 0.0%
+  Resolution Rate: 0.0%
+
+TOP ALERTS BY SEVERITY
+----------------------------------------
+  Sev4 Alerts:
+    Trapeze - EAM - Memphis Area TA - PROD - Service Health Planned Maintenance Alert: 8 occurrences
+    Trapeze - EAM - MATA - Prod - Resource Health Unhealthy Alert: 1 occurrences
+
+TOP 10 ALERTING RESOURCES
+----------------------------------------
+  8 alerts: /subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39
+  1 alerts: /subscriptions/8cff88e3-7424-4403-bccc-d8b4672f4d39/resourcegroups/rg-centralus-sqlmi-mata-prod/providers/microsoft.sql/managedinstances/sqlmiusceammataprod
+
+ALERTS BY RESOURCE TYPE
+----------------------------------------
+  managedinstances: 1
+
+HOURLY ALERT DISTRIBUTION
+----------------------------------------
+  00:00 [  0] 
+  01:00 [  0] 
+  02:00 [  0] 
+  03:00 [  0] 
+  04:00 [  0] 
+  05:00 [  0] 
+  06:00 [  0] 
+  07:00 [  0] 
+  08:00 [  0] 
+  09:00 [  0] 
+  10:00 [  0] 
+  11:00 [  0] 
+  12:00 [  0] 
+  13:00 [  0] 
+  14:00 [  0] 
+  15:00 [  3] ##################################################
+  16:00 [  0] 
+  17:00 [  0] 
+  18:00 [  0] 
+  19:00 [  0] 
+  20:00 [  0] 
+  21:00 [  2] #################################
+  22:00 [  3] ##################################################
+  23:00 [  1] ################
+
+DAILY ALERT TREND
+----------------------------------------
+  2025-08-16 [  2] #########################
+  2025-08-17 [  4] ##################################################
+  2025-08-18 [  2] #########################
+  2025-08-19 [  1] ############
+
+KEY RECOMMENDATIONS
+----------------------------------------
+
+================================================================================

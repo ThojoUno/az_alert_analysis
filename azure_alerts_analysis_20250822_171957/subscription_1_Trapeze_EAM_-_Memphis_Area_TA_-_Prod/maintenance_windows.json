@@ -1,0 +1,18 @@
+[
+  {
+    "duration": null,
+    "maintenanceScope": "InGuestPatch",
+    "name": "mc-centralus-windows-mata-prod-01",
+    "recurEvery": null,
+    "startDateTime": null,
+    "timeZone": null
+  },
+  {
+    "duration": null,
+    "maintenanceScope": "InGuestPatch",
+    "name": "mc-centralus-windows-def-mata-prod-01",
+    "recurEvery": null,
+    "startDateTime": null,
+    "timeZone": null
+  }
+]

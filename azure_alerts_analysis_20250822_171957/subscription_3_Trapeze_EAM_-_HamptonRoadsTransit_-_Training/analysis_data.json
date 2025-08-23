@@ -1,0 +1,23 @@
+{
+  "total_alerts": 0,
+  "severity_breakdown": {},
+  "alert_state_breakdown": {},
+  "alert_state_by_severity": {},
+  "alert_lifecycle_metrics": {
+    "new_alerts": 0,
+    "acknowledged_alerts": 0,
+    "closed_alerts": 0,
+    "avg_time_to_acknowledge": 0,
+    "avg_time_to_close": 0
+  },
+  "resource_type_breakdown": {},
+  "resource_group_breakdown": {},
+  "top_alerting_resources": {},
+  "top_alerts_by_severity": {},
+  "hourly_distribution": {},
+  "daily_distribution": {},
+  "correlation_patterns": [],
+  "tuning_recommendations": [],
+  "alert_storms": [],
+  "resource_health_alerts": []
+}
